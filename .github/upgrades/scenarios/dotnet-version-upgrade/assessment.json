@@ -1,0 +1,1235 @@
+{
+  "settings": {
+    "components": {
+      "code": true,
+      "binaries": false
+    },
+    "targetId": "net10.0",
+    "targetDisplayName": ".NETCoreApp,Version=v10.0"
+  },
+  "analysisStartTime": "2026-09-11T23:46:41.8342358Z",
+  "analysisEndTime": "2026-09-11T23:46:43.1923635Z",
+  "privacyModeHelpUrl": "https://go.microsoft.com/fwlink/?linkid=2270980",
+  "stats": {
+    "summary": {
+      "projects": 9,
+      "issues": 6,
+      "incidents": 35,
+      "effort": 35
+    },
+    "charts": {
+      "severity": {
+        "Mandatory": 25,
+        "Optional": 2,
+        "Potential": 8,
+        "Information": 0
+      },
+      "category": {
+        "Project": 9,
+        "Api": 24,
+        "NuGet": 2
+      }
+    }
+  },
+  "projects": [
+    {
+      "path": "src\\DecompileForge.AI\\DecompileForge.AI.csproj",
+      "startingProject": true,
+      "issues": 3,
+      "storyPoints": 7,
+      "properties": {
+        "appName": "DecompileForge.AI",
+        "projectKind": "ClassLibrary",
+        "frameworks": [
+          "net8.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "isTestProject": false,
+        "numberOfFiles": 3,
+        "numberOfCodeFiles": 3,
+        "linesTotal": 79,
+        "linesOfCode": 79,
+        "totalApiScanned": 219,
+        "minLinesOfCodeToChange": 6,
+        "maxLinesOfCodeToChange": 6
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "d4aa7010-0666-460d-b65d-af22cada1e81",
+          "ruleId": "Project.0002",
+          "projectPath": "src\\DecompileForge.AI\\DecompileForge.AI.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net8.0\nRecommended target framework: net10.0",
+              "protected": "Current target framework: net8.0\nRecommended target framework: net10.0"
+            },
+            "kind": "File",
+            "path": "src\\DecompileForge.AI\\DecompileForge.AI.csproj",
+            "snippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "protectedSnippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net8.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        },
+        {
+          "incidentId": "22032bb3-c8d9-4756-ad2a-1742136070ec",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "src\\DecompileForge.AI\\DecompileForge.AI.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "new Uri(options.Endpoint ?? \u0022http://localhost:11434\u0022)",
+              "protected": "T:System.Uri"
+            },
+            "kind": "File",
+            "path": "src\\DecompileForge.AI\\ProviderFactory.cs",
+            "snippet": "new Uri(options.Endpoint ?? \u0022http://localhost:11434\u0022)",
+            "protectedSnippet": "T:System.Uri",
+            "label": "T:System.Uri",
+            "properties": {
+              "CharCount": "1330"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 17,
+            "column": 40
+          }
+        },
+        {
+          "incidentId": "a294705b-8efd-488e-87f3-715c484a8712",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "src\\DecompileForge.AI\\DecompileForge.AI.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "new Uri(options.Endpoint ?? \u0022http://localhost:11434\u0022)",
+              "protected": "M:System.Uri.#ctor(System.String)"
+            },
+            "kind": "File",
+            "path": "src\\DecompileForge.AI\\ProviderFactory.cs",
+            "snippet": "new Uri(options.Endpoint ?? \u0022http://localhost:11434\u0022)",
+            "protectedSnippet": "M:System.Uri.#ctor(System.String)",
+            "label": "M:System.Uri.#ctor(System.String)",
+            "properties": {
+              "CharCount": "1330"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 17,
+            "column": 40
+          }
+        },
+        {
+          "incidentId": "54200f99-2f6b-485b-965c-bd9faf36226c",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "src\\DecompileForge.AI\\DecompileForge.AI.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "new Uri(Required(options.Endpoint, \u0022AZURE_OPENAI_ENDPOINT\u0022))",
+              "protected": "T:System.Uri"
+            },
+            "kind": "File",
+            "path": "src\\DecompileForge.AI\\ProviderFactory.cs",
+            "snippet": "new Uri(Required(options.Endpoint, \u0022AZURE_OPENAI_ENDPOINT\u0022))",
+            "protectedSnippet": "T:System.Uri",
+            "label": "T:System.Uri",
+            "properties": {
+              "CharCount": "1330"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 16,
+            "column": 47
+          }
+        },
+        {
+          "incidentId": "0eab326c-d144-4d6f-a4db-77299f8d3777",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "src\\DecompileForge.AI\\DecompileForge.AI.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "new Uri(Required(options.Endpoint, \u0022AZURE_OPENAI_ENDPOINT\u0022))",
+              "protected": "M:System.Uri.#ctor(System.String)"
+            },
+            "kind": "File",
+            "path": "src\\DecompileForge.AI\\ProviderFactory.cs",
+            "snippet": "new Uri(Required(options.Endpoint, \u0022AZURE_OPENAI_ENDPOINT\u0022))",
+            "protectedSnippet": "M:System.Uri.#ctor(System.String)",
+            "label": "M:System.Uri.#ctor(System.String)",
+            "properties": {
+              "CharCount": "1330"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 16,
+            "column": 47
+          }
+        },
+        {
+          "incidentId": "4723cec5-6a4a-447d-b1a1-82374568169a",
+          "ruleId": "Api.0002",
+          "description": "API is available in package System.ClientModel, 1.1.0-beta.4. Add package reference to System.ClientModel, 1.1.0-beta.4",
+          "projectPath": "src\\DecompileForge.AI\\DecompileForge.AI.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "new ApiKeyCredential(Required(options.ApiKey, \u0022OPENAI_API_KEY\u0022))",
+              "protected": "T:System.ClientModel.ApiKeyCredential"
+            },
+            "kind": "File",
+            "path": "src\\DecompileForge.AI\\ProviderFactory.cs",
+            "snippet": "new ApiKeyCredential(Required(options.ApiKey, \u0022OPENAI_API_KEY\u0022))",
+            "protectedSnippet": "T:System.ClientModel.ApiKeyCredential",
+            "label": "T:System.ClientModel.ApiKeyCredential",
+            "properties": {
+              "PackageId": "System.ClientModel",
+              "PackageNewVersion": "1.1.0-beta.4",
+              "CharCount": "1330"
+            },
+            "line": 15,
+            "column": 37
+          }
+        },
+        {
+          "incidentId": "c8e6da11-5375-417c-8963-3eec53704c20",
+          "ruleId": "Api.0002",
+          "description": "API is available in package System.ClientModel, 1.1.0-beta.4. Add package reference to System.ClientModel, 1.1.0-beta.4",
+          "projectPath": "src\\DecompileForge.AI\\DecompileForge.AI.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "new ApiKeyCredential(Required(options.ApiKey, \u0022OPENAI_API_KEY\u0022))",
+              "protected": "M:System.ClientModel.ApiKeyCredential.#ctor(System.String)"
+            },
+            "kind": "File",
+            "path": "src\\DecompileForge.AI\\ProviderFactory.cs",
+            "snippet": "new ApiKeyCredential(Required(options.ApiKey, \u0022OPENAI_API_KEY\u0022))",
+            "protectedSnippet": "M:System.ClientModel.ApiKeyCredential.#ctor(System.String)",
+            "label": "M:System.ClientModel.ApiKeyCredential.#ctor(System.String)",
+            "properties": {
+              "PackageId": "System.ClientModel",
+              "PackageNewVersion": "1.1.0-beta.4",
+              "CharCount": "1330"
+            },
+            "line": 15,
+            "column": 37
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "src\\DecompileForge.Cli\\DecompileForge.Cli.csproj",
+      "startingProject": true,
+      "issues": 1,
+      "storyPoints": 1,
+      "properties": {
+        "appName": "DecompileForge.Cli",
+        "projectKind": "DotNetCoreApp",
+        "frameworks": [
+          "net8.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "isTestProject": false,
+        "numberOfFiles": 1,
+        "numberOfCodeFiles": 1,
+        "linesTotal": 42,
+        "linesOfCode": 42,
+        "totalApiScanned": 86,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "5c7e05eb-ee78-4a31-b773-ad2b1bf6ae32",
+          "ruleId": "Project.0002",
+          "projectPath": "src\\DecompileForge.Cli\\DecompileForge.Cli.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net8.0\nRecommended target framework: net10.0",
+              "protected": "Current target framework: net8.0\nRecommended target framework: net10.0"
+            },
+            "kind": "File",
+            "path": "src\\DecompileForge.Cli\\DecompileForge.Cli.csproj",
+            "snippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "protectedSnippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net8.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "src\\DecompileForge.Comparison\\DecompileForge.Comparison.csproj",
+      "startingProject": true,
+      "issues": 1,
+      "storyPoints": 1,
+      "properties": {
+        "appName": "DecompileForge.Comparison",
+        "projectKind": "ClassLibrary",
+        "frameworks": [
+          "net8.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "isTestProject": false,
+        "numberOfFiles": 4,
+        "numberOfCodeFiles": 4,
+        "linesTotal": 168,
+        "linesOfCode": 168,
+        "totalApiScanned": 290,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "15c55f69-f1a7-476a-a3ab-e90145848825",
+          "ruleId": "Project.0002",
+          "projectPath": "src\\DecompileForge.Comparison\\DecompileForge.Comparison.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net8.0\nRecommended target framework: net10.0",
+              "protected": "Current target framework: net8.0\nRecommended target framework: net10.0"
+            },
+            "kind": "File",
+            "path": "src\\DecompileForge.Comparison\\DecompileForge.Comparison.csproj",
+            "snippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "protectedSnippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net8.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "tests\\DecompileForge.Comparison.Tests\\DecompileForge.Comparison.Tests.csproj",
+      "startingProject": true,
+      "issues": 2,
+      "storyPoints": 2,
+      "properties": {
+        "appName": "DecompileForge.Comparison.Tests",
+        "projectKind": "DotNetCoreApp",
+        "frameworks": [
+          "net8.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "isTestProject": true,
+        "numberOfFiles": 3,
+        "numberOfCodeFiles": 1,
+        "linesTotal": 1814,
+        "linesOfCode": 19,
+        "totalApiScanned": 25,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "dea25834-404e-437f-9ea2-cd4177b11205",
+          "ruleId": "NuGet.0005",
+          "projectPath": "tests\\DecompileForge.Comparison.Tests\\DecompileForge.Comparison.Tests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "xunit, 2.9.3\n\nRecommendation:\n\nThis package will only be updated for security issues. All future feature work has moved onto v3.\n\nGuide for migrating from xUnit.net v2 to v3: https://xunit.net/docs/getting-started/v3/migration\nRemove xunit, and replace with new package xunit, 2.9.3",
+              "protected": "xunit, 2.9.3\n\nRecommendation:\n\nThis package will only be updated for security issues. All future feature work has moved onto v3.\n\nGuide for migrating from xUnit.net v2 to v3: https://xunit.net/docs/getting-started/v3/migration\nRemove xunit, and replace with new package xunit, 2.9.3"
+            },
+            "kind": "File",
+            "path": "tests\\DecompileForge.Comparison.Tests\\DecompileForge.Comparison.Tests.csproj",
+            "snippet": "xunit, 2.9.3\n\nRecommendation:\n\nThis package will only be updated for security issues. All future feature work has moved onto v3.\n\nGuide for migrating from xUnit.net v2 to v3: https://xunit.net/docs/getting-started/v3/migration\nRemove xunit, and replace with new package xunit, 2.9.3",
+            "protectedSnippet": "xunit, 2.9.3\n\nRecommendation:\n\nThis package will only be updated for security issues. All future feature work has moved onto v3.\n\nGuide for migrating from xUnit.net v2 to v3: https://xunit.net/docs/getting-started/v3/migration\nRemove xunit, and replace with new package xunit, 2.9.3",
+            "label": "xunit 2.9.3",
+            "properties": {
+              "PackageId": "xunit",
+              "PackageVersion": "2.9.3",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "56c22b41-32c8-456c-b5d6-a0ed06bca084",
+          "ruleId": "Project.0002",
+          "projectPath": "tests\\DecompileForge.Comparison.Tests\\DecompileForge.Comparison.Tests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net8.0\nRecommended target framework: net10.0",
+              "protected": "Current target framework: net8.0\nRecommended target framework: net10.0"
+            },
+            "kind": "File",
+            "path": "tests\\DecompileForge.Comparison.Tests\\DecompileForge.Comparison.Tests.csproj",
+            "snippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "protectedSnippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net8.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "src\\DecompileForge.Contracts\\DecompileForge.Contracts.csproj",
+      "startingProject": true,
+      "issues": 1,
+      "storyPoints": 1,
+      "properties": {
+        "appName": "DecompileForge.Contracts",
+        "projectKind": "ClassLibrary",
+        "frameworks": [
+          "net8.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "isTestProject": false,
+        "numberOfFiles": 2,
+        "numberOfCodeFiles": 2,
+        "linesTotal": 54,
+        "linesOfCode": 54,
+        "totalApiScanned": 550,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "00aef688-24b6-4ed7-9f3e-66b8f749807a",
+          "ruleId": "Project.0002",
+          "projectPath": "src\\DecompileForge.Contracts\\DecompileForge.Contracts.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net8.0\nRecommended target framework: net10.0",
+              "protected": "Current target framework: net8.0\nRecommended target framework: net10.0"
+            },
+            "kind": "File",
+            "path": "src\\DecompileForge.Contracts\\DecompileForge.Contracts.csproj",
+            "snippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "protectedSnippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net8.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "src\\DecompileForge.Core\\DecompileForge.Core.csproj",
+      "startingProject": true,
+      "issues": 1,
+      "storyPoints": 1,
+      "properties": {
+        "appName": "DecompileForge.Core",
+        "projectKind": "ClassLibrary",
+        "frameworks": [
+          "net8.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "isTestProject": false,
+        "numberOfFiles": 2,
+        "numberOfCodeFiles": 2,
+        "linesTotal": 75,
+        "linesOfCode": 75,
+        "totalApiScanned": 137,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "21f941d3-e877-48a9-8b60-5263f52dac2b",
+          "ruleId": "Project.0002",
+          "projectPath": "src\\DecompileForge.Core\\DecompileForge.Core.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net8.0\nRecommended target framework: net10.0",
+              "protected": "Current target framework: net8.0\nRecommended target framework: net10.0"
+            },
+            "kind": "File",
+            "path": "src\\DecompileForge.Core\\DecompileForge.Core.csproj",
+            "snippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "protectedSnippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net8.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "tests\\DecompileForge.Core.Tests\\DecompileForge.Core.Tests.csproj",
+      "startingProject": true,
+      "issues": 2,
+      "storyPoints": 2,
+      "properties": {
+        "appName": "DecompileForge.Core.Tests",
+        "projectKind": "DotNetCoreApp",
+        "frameworks": [
+          "net8.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "isTestProject": true,
+        "numberOfFiles": 3,
+        "numberOfCodeFiles": 1,
+        "linesTotal": 1809,
+        "linesOfCode": 14,
+        "totalApiScanned": 30,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "1addafd3-1359-4bf3-bc25-7197165e1b21",
+          "ruleId": "NuGet.0005",
+          "projectPath": "tests\\DecompileForge.Core.Tests\\DecompileForge.Core.Tests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "xunit, 2.9.3\n\nRecommendation:\n\nThis package will only be updated for security issues. All future feature work has moved onto v3.\n\nGuide for migrating from xUnit.net v2 to v3: https://xunit.net/docs/getting-started/v3/migration\nRemove xunit, and replace with new package xunit, 2.9.3",
+              "protected": "xunit, 2.9.3\n\nRecommendation:\n\nThis package will only be updated for security issues. All future feature work has moved onto v3.\n\nGuide for migrating from xUnit.net v2 to v3: https://xunit.net/docs/getting-started/v3/migration\nRemove xunit, and replace with new package xunit, 2.9.3"
+            },
+            "kind": "File",
+            "path": "tests\\DecompileForge.Core.Tests\\DecompileForge.Core.Tests.csproj",
+            "snippet": "xunit, 2.9.3\n\nRecommendation:\n\nThis package will only be updated for security issues. All future feature work has moved onto v3.\n\nGuide for migrating from xUnit.net v2 to v3: https://xunit.net/docs/getting-started/v3/migration\nRemove xunit, and replace with new package xunit, 2.9.3",
+            "protectedSnippet": "xunit, 2.9.3\n\nRecommendation:\n\nThis package will only be updated for security issues. All future feature work has moved onto v3.\n\nGuide for migrating from xUnit.net v2 to v3: https://xunit.net/docs/getting-started/v3/migration\nRemove xunit, and replace with new package xunit, 2.9.3",
+            "label": "xunit 2.9.3",
+            "properties": {
+              "PackageId": "xunit",
+              "PackageVersion": "2.9.3",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "18c8a088-b9b4-422b-87fa-20486b9f97d4",
+          "ruleId": "Project.0002",
+          "projectPath": "tests\\DecompileForge.Core.Tests\\DecompileForge.Core.Tests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net8.0\nRecommended target framework: net10.0",
+              "protected": "Current target framework: net8.0\nRecommended target framework: net10.0"
+            },
+            "kind": "File",
+            "path": "tests\\DecompileForge.Core.Tests\\DecompileForge.Core.Tests.csproj",
+            "snippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "protectedSnippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net8.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "src\\DecompileForge.Decompilers\\DecompileForge.Decompilers.csproj",
+      "startingProject": true,
+      "issues": 1,
+      "storyPoints": 1,
+      "properties": {
+        "appName": "DecompileForge.Decompilers",
+        "projectKind": "ClassLibrary",
+        "frameworks": [
+          "net8.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "isTestProject": false,
+        "numberOfFiles": 4,
+        "numberOfCodeFiles": 4,
+        "linesTotal": 220,
+        "linesOfCode": 220,
+        "totalApiScanned": 319,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "65c9e2b0-48cd-4f53-8bd8-eecc4f983778",
+          "ruleId": "Project.0002",
+          "projectPath": "src\\DecompileForge.Decompilers\\DecompileForge.Decompilers.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net8.0\nRecommended target framework: net10.0",
+              "protected": "Current target framework: net8.0\nRecommended target framework: net10.0"
+            },
+            "kind": "File",
+            "path": "src\\DecompileForge.Decompilers\\DecompileForge.Decompilers.csproj",
+            "snippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "protectedSnippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net8.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "src\\DecompileForge.Wpf\\DecompileForge.Wpf.csproj",
+      "startingProject": true,
+      "issues": 3,
+      "storyPoints": 19,
+      "properties": {
+        "appName": "DecompileForge.Wpf",
+        "projectKind": "Wpf",
+        "frameworks": [
+          "net8.0-windows"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "isTestProject": false,
+        "numberOfFiles": 3,
+        "numberOfCodeFiles": 3,
+        "linesTotal": 75,
+        "linesOfCode": 75,
+        "totalApiScanned": 410,
+        "minLinesOfCodeToChange": 18,
+        "maxLinesOfCodeToChange": 18
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "c173e9ca-25fd-42f1-a67e-a15e6f07d503",
+          "ruleId": "Project.0002",
+          "projectPath": "src\\DecompileForge.Wpf\\DecompileForge.Wpf.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net8.0-windows\nRecommended target framework: net10.0-windows",
+              "protected": "Current target framework: net8.0-windows\nRecommended target framework: net10.0-windows"
+            },
+            "kind": "File",
+            "path": "src\\DecompileForge.Wpf\\DecompileForge.Wpf.csproj",
+            "snippet": "Current target framework: net8.0-windows\nRecommended target framework: net10.0-windows",
+            "protectedSnippet": "Current target framework: net8.0-windows\nRecommended target framework: net10.0-windows",
+            "properties": {
+              "CurrentTargetFramework": "net8.0-windows",
+              "RecommendedTargetFramework": "net10.0-windows"
+            }
+          }
+        },
+        {
+          "incidentId": "75124df6-7bba-457f-9af6-815161c14517",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "src\\DecompileForge.Wpf\\DecompileForge.Wpf.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "app.Run();",
+              "protected": "M:System.Windows.Application.Run"
+            },
+            "kind": "File",
+            "path": "src\\DecompileForge.Wpf\\obj\\Release\\net8.0-windows\\App.g.i.cs",
+            "snippet": "app.Run();",
+            "protectedSnippet": "M:System.Windows.Application.Run",
+            "label": "M:System.Windows.Application.Run",
+            "properties": {
+              "CharCount": "1813"
+            },
+            "line": 50,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "d515079b-8cc7-41df-8364-ed2552462a91",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "src\\DecompileForge.Wpf\\DecompileForge.Wpf.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "protected override async void OnExit(ExitEventArgs e)",
+              "protected": "T:System.Windows.ExitEventArgs"
+            },
+            "kind": "File",
+            "path": "src\\DecompileForge.Wpf\\App.xaml.cs",
+            "snippet": "protected override async void OnExit(ExitEventArgs e)",
+            "protectedSnippet": "T:System.Windows.ExitEventArgs",
+            "label": "T:System.Windows.ExitEventArgs",
+            "properties": {
+              "CharCount": "1350"
+            },
+            "line": 22,
+            "column": 4
+          }
+        },
+        {
+          "incidentId": "fffd317a-8844-49e8-aa34-512321018997",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "src\\DecompileForge.Wpf\\DecompileForge.Wpf.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "base.OnExit(e);",
+              "protected": "M:System.Windows.Application.OnExit(System.Windows.ExitEventArgs)"
+            },
+            "kind": "File",
+            "path": "src\\DecompileForge.Wpf\\App.xaml.cs",
+            "snippet": "base.OnExit(e);",
+            "protectedSnippet": "M:System.Windows.Application.OnExit(System.Windows.ExitEventArgs)",
+            "label": "M:System.Windows.Application.OnExit(System.Windows.ExitEventArgs)",
+            "properties": {
+              "CharCount": "1350"
+            },
+            "line": 22,
+            "column": 102
+          }
+        },
+        {
+          "incidentId": "80448f19-65b4-4558-a01d-1f942d672728",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "src\\DecompileForge.Wpf\\DecompileForge.Wpf.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "protected override async void OnStartup(StartupEventArgs e)",
+              "protected": "T:System.Windows.StartupEventArgs"
+            },
+            "kind": "File",
+            "path": "src\\DecompileForge.Wpf\\App.xaml.cs",
+            "snippet": "protected override async void OnStartup(StartupEventArgs e)",
+            "protectedSnippet": "T:System.Windows.StartupEventArgs",
+            "label": "T:System.Windows.StartupEventArgs",
+            "properties": {
+              "CharCount": "1350"
+            },
+            "line": 21,
+            "column": 4
+          }
+        },
+        {
+          "incidentId": "cb4d3b0e-6224-4865-827f-ffc3cc22dd58",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "src\\DecompileForge.Wpf\\DecompileForge.Wpf.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "_host.Services.GetRequiredService\u003CMainWindow\u003E().Show();",
+              "protected": "M:System.Windows.Window.Show"
+            },
+            "kind": "File",
+            "path": "src\\DecompileForge.Wpf\\App.xaml.cs",
+            "snippet": "_host.Services.GetRequiredService\u003CMainWindow\u003E().Show();",
+            "protectedSnippet": "M:System.Windows.Window.Show",
+            "label": "M:System.Windows.Window.Show",
+            "properties": {
+              "CharCount": "1350"
+            },
+            "line": 21,
+            "column": 111
+          }
+        },
+        {
+          "incidentId": "4533692c-7ee3-41fe-aaf9-6b8192dfdb27",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "src\\DecompileForge.Wpf\\DecompileForge.Wpf.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "base.OnStartup(e);",
+              "protected": "M:System.Windows.Application.OnStartup(System.Windows.StartupEventArgs)"
+            },
+            "kind": "File",
+            "path": "src\\DecompileForge.Wpf\\App.xaml.cs",
+            "snippet": "base.OnStartup(e);",
+            "protectedSnippet": "M:System.Windows.Application.OnStartup(System.Windows.StartupEventArgs)",
+            "label": "M:System.Windows.Application.OnStartup(System.Windows.StartupEventArgs)",
+            "properties": {
+              "CharCount": "1350"
+            },
+            "line": 21,
+            "column": 66
+          }
+        },
+        {
+          "incidentId": "d36c8599-b533-42ec-8392-07e29aa65078",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "src\\DecompileForge.Wpf\\DecompileForge.Wpf.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Application",
+              "protected": "M:System.Windows.Application.#ctor"
+            },
+            "kind": "File",
+            "path": "src\\DecompileForge.Wpf\\App.xaml.cs",
+            "snippet": "Application",
+            "protectedSnippet": "M:System.Windows.Application.#ctor",
+            "label": "M:System.Windows.Application.#ctor",
+            "properties": {
+              "CharCount": "1350"
+            },
+            "line": 12,
+            "column": 27
+          }
+        },
+        {
+          "incidentId": "a35f88f8-898f-45ba-827e-098dbc9eac43",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "src\\DecompileForge.Wpf\\DecompileForge.Wpf.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Application",
+              "protected": "T:System.Windows.Application"
+            },
+            "kind": "File",
+            "path": "src\\DecompileForge.Wpf\\App.xaml.cs",
+            "snippet": "Application",
+            "protectedSnippet": "T:System.Windows.Application",
+            "label": "T:System.Windows.Application",
+            "properties": {
+              "CharCount": "1350"
+            },
+            "line": 12,
+            "column": 27
+          }
+        },
+        {
+          "incidentId": "4e495d8b-09fb-4530-b0bf-a1598d8ab157",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "src\\DecompileForge.Wpf\\DecompileForge.Wpf.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "System.Windows.Application.LoadComponent(this, resourceLocater);",
+              "protected": "T:System.Windows.Application"
+            },
+            "kind": "File",
+            "path": "src\\DecompileForge.Wpf\\obj\\Release\\net8.0-windows\\MainWindow.g.i.cs",
+            "snippet": "System.Windows.Application.LoadComponent(this, resourceLocater);",
+            "protectedSnippet": "T:System.Windows.Application",
+            "label": "T:System.Windows.Application",
+            "properties": {
+              "CharCount": "3074"
+            },
+            "line": 57,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "5defd6d5-3066-441c-91a1-dd281855b9ea",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "src\\DecompileForge.Wpf\\DecompileForge.Wpf.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "System.Windows.Application.LoadComponent(this, resourceLocater);",
+              "protected": "M:System.Windows.Application.LoadComponent(System.Object,System.Uri)"
+            },
+            "kind": "File",
+            "path": "src\\DecompileForge.Wpf\\obj\\Release\\net8.0-windows\\MainWindow.g.i.cs",
+            "snippet": "System.Windows.Application.LoadComponent(this, resourceLocater);",
+            "protectedSnippet": "M:System.Windows.Application.LoadComponent(System.Object,System.Uri)",
+            "label": "M:System.Windows.Application.LoadComponent(System.Object,System.Uri)",
+            "properties": {
+              "CharCount": "3074"
+            },
+            "line": 57,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "530e57f5-8331-4f30-8751-15d119a5ef78",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "src\\DecompileForge.Wpf\\DecompileForge.Wpf.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "System.Uri resourceLocater = new System.Uri(\u0022/DecompileForge.Wpf;V1.0.0.0;component/mainwindow.xaml\u0022, System.UriKind.Relative);",
+              "protected": "T:System.Uri"
+            },
+            "kind": "File",
+            "path": "src\\DecompileForge.Wpf\\obj\\Release\\net8.0-windows\\MainWindow.g.i.cs",
+            "snippet": "System.Uri resourceLocater = new System.Uri(\u0022/DecompileForge.Wpf;V1.0.0.0;component/mainwindow.xaml\u0022, System.UriKind.Relative);",
+            "protectedSnippet": "T:System.Uri",
+            "label": "T:System.Uri",
+            "properties": {
+              "CharCount": "3074"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 54,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "5bd269b0-46ce-410a-9e57-39379c4d6d3e",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "src\\DecompileForge.Wpf\\DecompileForge.Wpf.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "System.Uri resourceLocater = new System.Uri(\u0022/DecompileForge.Wpf;V1.0.0.0;component/mainwindow.xaml\u0022, System.UriKind.Relative);",
+              "protected": "M:System.Uri.#ctor(System.String,System.UriKind)"
+            },
+            "kind": "File",
+            "path": "src\\DecompileForge.Wpf\\obj\\Release\\net8.0-windows\\MainWindow.g.i.cs",
+            "snippet": "System.Uri resourceLocater = new System.Uri(\u0022/DecompileForge.Wpf;V1.0.0.0;component/mainwindow.xaml\u0022, System.UriKind.Relative);",
+            "protectedSnippet": "M:System.Uri.#ctor(System.String,System.UriKind)",
+            "label": "M:System.Uri.#ctor(System.String,System.UriKind)",
+            "properties": {
+              "CharCount": "3074"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 54,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "b3f00e39-0491-4d35-b660-f653b30ffd42",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "src\\DecompileForge.Wpf\\DecompileForge.Wpf.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "DataContext = vm;",
+              "protected": "P:System.Windows.FrameworkElement.DataContext"
+            },
+            "kind": "File",
+            "path": "src\\DecompileForge.Wpf\\MainWindow.xaml.cs",
+            "snippet": "DataContext = vm;",
+            "protectedSnippet": "P:System.Windows.FrameworkElement.DataContext",
+            "label": "P:System.Windows.FrameworkElement.DataContext",
+            "properties": {
+              "CharCount": "216"
+            },
+            "line": 4,
+            "column": 104
+          }
+        },
+        {
+          "incidentId": "9dcf40d0-5564-497a-a9be-a8488a573fd3",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "src\\DecompileForge.Wpf\\DecompileForge.Wpf.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "public MainWindow(MainViewModel vm) { InitializeComponent(); DataContext = vm; }",
+              "protected": "M:System.Windows.Window.#ctor"
+            },
+            "kind": "File",
+            "path": "src\\DecompileForge.Wpf\\MainWindow.xaml.cs",
+            "snippet": "public MainWindow(MainViewModel vm) { InitializeComponent(); DataContext = vm; }",
+            "protectedSnippet": "M:System.Windows.Window.#ctor",
+            "label": "M:System.Windows.Window.#ctor",
+            "properties": {
+              "CharCount": "216"
+            },
+            "line": 4,
+            "column": 43
+          }
+        },
+        {
+          "incidentId": "80d77422-172c-4df2-9d93-18bd5fd12115",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "src\\DecompileForge.Wpf\\DecompileForge.Wpf.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "DataContext = vm;",
+              "protected": "P:System.Windows.FrameworkElement.DataContext"
+            },
+            "kind": "File",
+            "path": "src\\DecompileForge.Wpf\\MainWindow.xaml.cs",
+            "snippet": "DataContext = vm;",
+            "protectedSnippet": "P:System.Windows.FrameworkElement.DataContext",
+            "label": "P:System.Windows.FrameworkElement.DataContext",
+            "properties": {
+              "CharCount": "216"
+            },
+            "line": 4,
+            "column": 104
+          }
+        },
+        {
+          "incidentId": "12a0ac4f-a051-4d48-8347-781f6a109cfc",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "src\\DecompileForge.Wpf\\DecompileForge.Wpf.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "public MainWindow(MainViewModel vm) { InitializeComponent(); DataContext = vm; }",
+              "protected": "M:System.Windows.Window.#ctor"
+            },
+            "kind": "File",
+            "path": "src\\DecompileForge.Wpf\\MainWindow.xaml.cs",
+            "snippet": "public MainWindow(MainViewModel vm) { InitializeComponent(); DataContext = vm; }",
+            "protectedSnippet": "M:System.Windows.Window.#ctor",
+            "label": "M:System.Windows.Window.#ctor",
+            "properties": {
+              "CharCount": "216"
+            },
+            "line": 4,
+            "column": 43
+          }
+        },
+        {
+          "incidentId": "b6f1582a-ea03-49d5-b5e1-fafa2a6eee3c",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "src\\DecompileForge.Wpf\\DecompileForge.Wpf.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "IComponentConnector",
+              "protected": "T:System.Windows.Markup.IComponentConnector"
+            },
+            "kind": "File",
+            "path": "src\\DecompileForge.Wpf\\obj\\Release\\net8.0-windows\\MainWindow.g.i.cs",
+            "snippet": "IComponentConnector",
+            "protectedSnippet": "T:System.Windows.Markup.IComponentConnector",
+            "label": "T:System.Windows.Markup.IComponentConnector",
+            "properties": {
+              "CharCount": "3074"
+            },
+            "line": 40,
+            "column": 83
+          }
+        },
+        {
+          "incidentId": "0807b612-f8a1-46ba-99d0-a1205ae3139b",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "src\\DecompileForge.Wpf\\DecompileForge.Wpf.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Window",
+              "protected": "T:System.Windows.Window"
+            },
+            "kind": "File",
+            "path": "src\\DecompileForge.Wpf\\MainWindow.xaml.cs",
+            "snippet": "Window",
+            "protectedSnippet": "T:System.Windows.Window",
+            "label": "T:System.Windows.Window",
+            "properties": {
+              "CharCount": "216"
+            },
+            "line": 4,
+            "column": 34
+          }
+        }
+      ],
+      "features": [
+        {
+          "featureId": "Wpf",
+          "incidents": [
+            "b6f1582a-ea03-49d5-b5e1-fafa2a6eee3c"
+          ]
+        }
+      ]
+    }
+  ],
+  "rules": {
+    "Project.0002": {
+      "id": "Project.0002",
+      "isFeature": false,
+      "description": "Project\u0027s target framework(s) needs to be changed to the new target framework that you selected for this upgrade.\n\nDuring upgrade target framework will be adjusted to corresponding platform when applicable. In some cases project would result in multiple target frameworks after the upgrade if it was using features that now have their own platforms in modern .NET frameworks (windows, iOS, Android etc).",
+      "label": "Project\u0027s target framework(s) needs to be changed",
+      "severity": "Mandatory",
+      "effort": 1,
+      "links": [
+        {
+          "title": "Overview of porting from .NET Framework to .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265227",
+          "isCustom": false
+        },
+        {
+          "title": ".NET project SDKs",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265226",
+          "isCustom": false
+        }
+      ]
+    },
+    "Api.0003": {
+      "id": "Api.0003",
+      "isFeature": false,
+      "description": "API has a behavioral change in selected .NET version: code and binaries may behave differently at runtime without needing recompilation, but the new behavior might be undesirable and require updates.",
+      "label": "Behavioral change in selected .NET version",
+      "severity": "Potential",
+      "effort": 1
+    },
+    "Api.0002": {
+      "id": "Api.0002",
+      "isFeature": false,
+      "description": "API is source incompatible for selected .NET version: requires code changes to compile successfully when targeting a new version, such as removing obsolete APIs or changing method signatures.",
+      "label": "Source incompatible for selected .NET version",
+      "severity": "Potential",
+      "effort": 1,
+      "links": [
+        {
+          "title": "Breaking changes in .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262679",
+          "isCustom": false
+        }
+      ]
+    },
+    "NuGet.0005": {
+      "id": "NuGet.0005",
+      "isFeature": false,
+      "description": "NuGet package is deprecated.\n\nGo to its documentation and if there is a guidance for replacement of functionality provided by this package.",
+      "label": "NuGet package is deprecated",
+      "severity": "Optional",
+      "effort": 1,
+      "links": [
+        {
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262531",
+          "isCustom": false
+        }
+      ]
+    },
+    "Api.0001": {
+      "id": "Api.0001",
+      "isFeature": false,
+      "description": "API is binary incompatible for selected .NET version: affects existing binaries, often requiring recompilation, because the API has changed in a way that prevents older binaries from loading or executing.",
+      "label": "Binary incompatible for selected .NET version",
+      "severity": "Mandatory",
+      "effort": 1,
+      "links": [
+        {
+          "title": "Breaking changes in .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262679",
+          "isCustom": false
+        }
+      ]
+    },
+    "Wpf": {
+      "id": "Wpf",
+      "isFeature": false,
+      "description": "WPF APIs for building Windows desktop applications with XAML-based UI that are available in .NET on Windows. WPF provides rich desktop UI capabilities with data binding and styling. Enable Windows Desktop support: Option 1 (Recommended): Target net9.0-windows; Option 2: Add \u003CUseWindowsDesktop\u003Etrue\u003C/UseWindowsDesktop\u003E.",
+      "label": "WPF (Windows Presentation Foundation)",
+      "severity": "Mandatory",
+      "effort": 1,
+      "links": [
+        {
+          "title": "WPF on .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2342008",
+          "isCustom": false
+        }
+      ]
+    }
+  }
+}
