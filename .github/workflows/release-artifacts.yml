@@ -1,0 +1,42 @@
+name: Build and Attach Release Artifacts
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  build-and-attach:
+    name: Build and attach artifacts
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '10.0.x'
+
+    - name: Restore
+      run: dotnet restore
+
+    - name: Build
+      run: dotnet build --configuration Release --no-restore
+
+    - name: Publish CLI
+      run: dotnet publish src/DecompileForge.Cli/DecompileForge.Cli.csproj -c Release -o ${{ runner.temp }}/artifacts/DecompileForge.Cli
+
+    - name: Publish WPF
+      run: dotnet publish src/DecompileForge.Wpf/DecompileForge.Wpf.csproj -c Release -o ${{ runner.temp }}/artifacts/DecompileForge.Wpf
+
+    - name: Archive artifacts
+      run: |
+        powershell -NoProfile -Command "Compress-Archive -Path '${{ runner.temp }}\\artifacts\\*' -DestinationPath '${{ runner.temp }}\\release-artifacts.zip' -Force"
+
+    - name: Upload release asset
+      uses: softprops/action-gh-release@v1
+      with:
+        files: ${{ runner.temp }}/release-artifacts.zip
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
