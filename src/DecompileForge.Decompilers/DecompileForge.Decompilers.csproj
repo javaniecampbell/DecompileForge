@@ -1,0 +1,8 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <ProjectReference Include="../DecompileForge.Contracts/DecompileForge.Contracts.csproj" />
+    <ProjectReference Include="../DecompileForge.Core/DecompileForge.Core.csproj" />
+    <PackageReference Include="ICSharpCode.Decompiler" />
+    <PackageReference Include="AsmResolver.DotNet" />
+  </ItemGroup>
+</Project>
