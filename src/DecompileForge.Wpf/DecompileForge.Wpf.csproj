@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><OutputType>WinExe</OutputType><TargetFramework>net10.0-windows</TargetFramework><UseWPF>true</UseWPF><EnableWindowsTargeting>true</EnableWindowsTargeting></PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../DecompileForge.Contracts/DecompileForge.Contracts.csproj" />
+    <ProjectReference Include="../DecompileForge.Core/DecompileForge.Core.csproj" />
+    <ProjectReference Include="../DecompileForge.Decompilers/DecompileForge.Decompilers.csproj" />
+    <ProjectReference Include="../DecompileForge.Comparison/DecompileForge.Comparison.csproj" />
+    <ProjectReference Include="../DecompileForge.AI/DecompileForge.AI.csproj" />
+    <PackageReference Include="CommunityToolkit.Mvvm" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" />
+  </ItemGroup>
+</Project>
