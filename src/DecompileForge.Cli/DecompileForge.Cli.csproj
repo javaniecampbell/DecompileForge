@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><OutputType>Exe</OutputType></PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../DecompileForge.Contracts/DecompileForge.Contracts.csproj" />
+    <ProjectReference Include="../DecompileForge.Core/DecompileForge.Core.csproj" />
+    <ProjectReference Include="../DecompileForge.Decompilers/DecompileForge.Decompilers.csproj" />
+    <ProjectReference Include="../DecompileForge.Comparison/DecompileForge.Comparison.csproj" />
+    <ProjectReference Include="../DecompileForge.AI/DecompileForge.AI.csproj" />
+  </ItemGroup>
+</Project>

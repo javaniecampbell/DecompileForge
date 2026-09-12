@@ -1,0 +1,15 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/DecompileForge.Contracts/DecompileForge.Contracts.csproj" />
+    <Project Path="src/DecompileForge.Core/DecompileForge.Core.csproj" />
+    <Project Path="src/DecompileForge.Decompilers/DecompileForge.Decompilers.csproj" />
+    <Project Path="src/DecompileForge.Comparison/DecompileForge.Comparison.csproj" />
+    <Project Path="src/DecompileForge.AI/DecompileForge.AI.csproj" />
+    <Project Path="src/DecompileForge.Cli/DecompileForge.Cli.csproj" />
+    <Project Path="src/DecompileForge.Wpf/DecompileForge.Wpf.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/DecompileForge.Core.Tests/DecompileForge.Core.Tests.csproj" />
+    <Project Path="tests/DecompileForge.Comparison.Tests/DecompileForge.Comparison.Tests.csproj" />
+  </Folder>
+</Solution>

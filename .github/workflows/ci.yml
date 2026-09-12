@@ -1,0 +1,25 @@
+name: ci
+on:
+  push: { branches: [main] }
+  pull_request:
+permissions: { contents: read, security-events: write }
+jobs:
+  build:
+    strategy: { matrix: { os: [ubuntu-latest, windows-latest] } }
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with: { dotnet-version: 8.0.x, cache: true, cache-dependency-path: '**/packages.lock.json' }
+      - run: dotnet restore DecompileForge.slnx
+      - run: dotnet build DecompileForge.slnx -c Release --no-restore
+      - run: dotnet test DecompileForge.slnx -c Release --no-build --collect:"XPlat Code Coverage"
+      - run: dotnet list DecompileForge.slnx package --vulnerable --include-transitive
+  codeql:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: github/codeql-action/init@v3
+        with: { languages: csharp }
+      - uses: github/codeql-action/autobuild@v3
+      - uses: github/codeql-action/analyze@v3
