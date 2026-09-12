@@ -24,19 +24,37 @@ jobs:
     - name: Build
       run: dotnet build --configuration Release --no-restore
 
-    - name: Publish CLI
+    - name: Publish CLI (portable)
       run: dotnet publish src/DecompileForge.Cli/DecompileForge.Cli.csproj -c Release -o ${{ runner.temp }}/artifacts/DecompileForge.Cli
 
-    - name: Publish WPF
+    - name: Publish CLI (self-contained win-x64 single-file)
+      run: |
+        dotnet publish src/DecompileForge.Cli/DecompileForge.Cli.csproj -c Release -r win-x64 \
+          -p:PublishSingleFile=true -p:SelfContained=true -p:PublishTrimmed=true \
+          -o ${{ runner.temp }}/artifacts/installers/DecompileForge.Cli.win-x64
+
+    - name: Publish WPF (portable)
       run: dotnet publish src/DecompileForge.Wpf/DecompileForge.Wpf.csproj -c Release -o ${{ runner.temp }}/artifacts/DecompileForge.Wpf
 
-    - name: Archive artifacts
+    - name: Publish WPF (self-contained win-x64 single-file)
       run: |
-        powershell -NoProfile -Command "Compress-Archive -Path '${{ runner.temp }}\\artifacts\\*' -DestinationPath '${{ runner.temp }}\\release-artifacts.zip' -Force"
+        dotnet publish src/DecompileForge.Wpf/DecompileForge.Wpf.csproj -c Release -r win-x64 \
+          -p:PublishSingleFile=true -p:SelfContained=true -p:PublishTrimmed=true \
+          -o ${{ runner.temp }}/artifacts/installers/DecompileForge.Wpf.win-x64
 
-    - name: Upload release asset
+    - name: Archive release artifacts (portable outputs)
+      run: |
+        powershell -NoProfile -Command "Compress-Archive -Path '${{ runner.temp }}\\artifacts\\DecompileForge.Cli','${{ runner.temp }}\\artifacts\\DecompileForge.Wpf' -DestinationPath '${{ runner.temp }}\\release-artifacts.zip' -Force"
+
+    - name: Archive installers (self-contained single-file builds)
+      run: |
+        powershell -NoProfile -Command "Compress-Archive -Path '${{ runner.temp }}\\artifacts\\installers\\*' -DestinationPath '${{ runner.temp }}\\installers.zip' -Force"
+
+    - name: Upload release assets
       uses: softprops/action-gh-release@v1
       with:
-        files: ${{ runner.temp }}/release-artifacts.zip
+        files: |
+          ${{ runner.temp }}/release-artifacts.zip
+          ${{ runner.temp }}/installers.zip
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
